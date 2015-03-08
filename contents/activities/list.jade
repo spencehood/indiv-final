@@ -1,0 +1,23 @@
+h3 Results
+table.table.table-striped
+	thead
+		tr
+			th Title
+			th Author
+			th Date Published
+			th Genre
+			th Description
+			th Publisher
+	tbody
+	each item in data
+		tr
+			td= item.type
+			td= item.date
+			td= item.video_title
+			td
+				a(href=item.video_url)
+					= item.video_url
+			td
+				img(src=item.video_thumbnail_small)
+			td= item.video_tags
+			
