@@ -1,4 +1,4 @@
-h3 Results
+h3 API Results
 table.table.table-striped
 	thead
 		tr
@@ -9,15 +9,13 @@ table.table.table-striped
 			th Description
 			th Publisher
 	tbody
+
 	each item in data
 		tr
-			td= item.type
-			td= item.date
-			td= item.video_title
-			td
-				a(href=item.video_url)
-					= item.video_url
-			td
-				img(src=item.video_thumbnail_small)
-			td= item.video_tags
+			td= item.title
+			td= item.author
+			td= item.date_published
+			td= item.genre
+			td= item.description
+			td= item.publisher
 			
