@@ -1,7 +1,7 @@
-$( "#videos" ).on( "click", function( event ) {
-    videos.load()
+$( "#movies" ).on( "click", function( event ) {
+    movies.load()
 })
 
-$( "#activities" ).on( "click", function( event ) {
-    activities.load()
+$( "#books" ).on( "click", function( event ) {
+    books.load()
 })

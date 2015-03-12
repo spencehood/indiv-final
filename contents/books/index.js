@@ -1,4 +1,4 @@
-var activities = {
+var books = {
 
     searchByUserId: function(id) {
 
@@ -12,7 +12,7 @@ var activities = {
                 console.log('now ' + data)
                 
                 //$.get("/vimeo/activities/list.jade", function(template) {
-                $.get("/nytimes/activities/list.jade", function(template) {
+                $.get("/nytimes/books/list.jade", function(template) {
                 
                     var html = jade.render(template, {
                         data: data
@@ -27,16 +27,16 @@ var activities = {
     load: function() {
 
         //$.get("/vimeo/activities/ui.jade", function(template) {
-        $.get("/nytimes/activities/ui.jade", function(template) {
+        $.get("/nytimes/books/ui.jade", function(template) {
 
             var html = jade.render(template)
             $("#ui").html(html)
         })
 
         // default search results
-        activities.searchByUserId('101193')
+        books.searchByUserId('Girl')
 
-        nyt.best_sellers.get({'query':'girl'}, console.log);
+        // nyt.best_sellers.get({'query':'girl'}, console.log);
 
     }
 

@@ -1,4 +1,4 @@
-var videos = {
+var movies = {
 
     searchByUserId: function(id) {
 
@@ -11,7 +11,7 @@ var videos = {
             console.log('now ' + data)
             
             if (data){
-            $.get("/nytimes/videos/list.jade", function(template) {
+            $.get("/nytimes/movies/list.jade", function(template) {
                 var html = jade.render(template, {
                     data: data
                 });
@@ -26,14 +26,14 @@ var videos = {
     load: function() {
 
         //$.get("/vimeo/videos/ui.jade", function(template) {
-        $.get("/nytimes/videos/ui.jade", function(template) {
+        $.get("/nytimes/movies/ui.jade", function(template) {
 
             var html = jade.render(template)
             $("#ui").html(html)
         })
 
         // default search results
-        videos.searchByUserId('101193')
+        movies.searchByUserId('101193')
 
     }
 
